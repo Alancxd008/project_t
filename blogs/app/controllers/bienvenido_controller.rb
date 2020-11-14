@@ -1,0 +1,2 @@
+class BienvenidoController < ApplicationController
+end

@@ -1,0 +1,19 @@
+
+
+
+<p>
+  <strong>ID:</strong>
+  <%= @article.id %>
+</p>
+<br>
+
+<p>
+  <strong>TITULO:</strong>
+  <%= @article.title %>
+
+</p>
+<br>
+
+<%= link_to '<<Regresar|', :action => :index %>
+<%= link_to ' Editar|', :action => :edit, :id => @article.id %>
+<%= link_to " Eliminar", @article,method: :delete,data: { confirm: "Deseas Eliminar registro?"} %>
