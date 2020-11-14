@@ -1,24 +1,11 @@
 # README
+PROYECTO CRUD
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Características
 
-Things you may want to cover:
+* Ruby version 2.6
 
-* Ruby version
+* Database Sqlite3
 
-* System dependencies
+Hecho por: Alan Muricio Chavez Us
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
