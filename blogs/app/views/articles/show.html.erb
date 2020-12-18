@@ -1,18 +1,16 @@
 
 
 
-<p>
-  <strong>ID:</strong>
-  <%= @article.id %>
-</p>
-<br>
 
-<p>
-  <strong>TITULO:</strong>
-  <%= @article.title %>
 
-</p>
-<br>
+<article class="blog-post">
+  	
+        <h2 class="blog-post-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Articulo número <%= @article.id%></font></font></h2>
+        <p class="blog-post-meta"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NO HAY FECHA BRO</font></font><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></a></p>
+
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><%= @article.title%></font><font style="vertical-align: inherit;"></font></font></p>
+   
+      </article>
 
 <%= link_to '<<Regresar|', :action => :index %>
 <%= link_to ' Editar|', :action => :edit, :id => @article.id %>

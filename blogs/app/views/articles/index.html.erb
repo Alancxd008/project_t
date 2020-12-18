@@ -1,19 +1,60 @@
-<h1>INICIO</h1>
+<body style="background-color: #1A1A22;">
+	
+<nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Segundo ejemplo de barra de navegación">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">BLOG</font></font></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Navegación de palanca">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">INICIO ARTICLES</font></font></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CATEGORIES</font></font></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../users/sign_in"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">INICIAR SESIÓN</font></font></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../users/sign_up"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">REGISTRATE</font></font></a>
+          </li>
+        </ul>
+        <form>
+          <input class="form-control " type="text" placeholder="Buscar" aria-label="Buscar" style="margin-left:300%">
+
+        </form>
+      </div>
+    </div>
+  </nav>
+
+<br>
+
+<div class="body" style="background-color: #696969;">
+	 <table class="table table-dark table-hover">
+      <thead>
+    <tr>
+      <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ID</font></font></th>
+      <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TITLE</font></font></th>
+      <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ACCIÓN</font></font></th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% @articles.each do |list| %>
+    <tr>
+      <th scope="row"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><%= list.id%></font></font></th>
+      <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><%= list.title%></font></font></td>
+      <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><%= link_to 'Mostrar', :action => :show, :id => list.id %>||<%= link_to 'Editar', :action => :edit, :id => list.id%></font></font></td>
+      
+    </tr>
+    <%end%>
+  </tbody>
+
+  </table>
+</div>
 
 
-<table>
-	<tr>
-		<th>ID</th>
-		<th>TITLE</th>
-		
-	</tr>
-<% @articles.each do |list| %>
-	<tr>
-		<td><%= list.id%></td>
-		<td><%= list.title%></td>
-		
-		<td><%= link_to 'Mostrar', :action => :show, :id => list.id %></td>
-		<td><%= link_to 'Editar', :action => :edit, :id => list.id%></td>
-	</tr>
-	<%end%>
-</table>
+</body>
+

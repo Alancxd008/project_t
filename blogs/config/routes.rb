@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'articles/index'
+  get 'users/sign_in'
   get 'articles/show'
  
 
